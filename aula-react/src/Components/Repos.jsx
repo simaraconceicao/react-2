@@ -5,7 +5,6 @@ const Repos = ( )=>{
     const [repositories, setRepositories] = useState([])
     const [filteredRepos, setfilteredRepos] = useState([])
     const [search, setSearch] = useState('')
-    
    
     
 
@@ -33,15 +32,13 @@ const Repos = ( )=>{
 
     return (
         <div>
-            <h1>Meus Repos:</h1>
+            <h1>Meus repos:</h1>
 
             <input      
                 type="text" 
                 onChange={e => setSearch(e.target.value)}
                 placeholder="Digite um Repo"
-            />
-
-            
+            />            
 
             <ul>
                 {filteredRepos.map(repo =>{

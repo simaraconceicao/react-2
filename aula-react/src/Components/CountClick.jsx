@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 
 
 const CountClick = () => {
@@ -8,6 +9,13 @@ const CountClick = () => {
         setCountClick(countClick + 1)
     }
     
+    useEffect(()=>{
+        document.title = countClick
+        return ()=> document.title = 'Meu app'
+
+    }
+    
+    ,[countClick])
 
     return (
         <div>
